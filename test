@@ -1,0 +1,12 @@
+var http = require("http");
+var ip = request.headers["x-forwarded-for"];
+var requestObject = {
+ "url": "https://scriptr.io/hello",
+ "params": {"ip": ip},
+ "method": "POST" 
+}
+return ip;
+var response = http.request(requestObject);
+return response;
+var countryName = JSON.parse(response.body);
+return countryName.country;
